@@ -1,0 +1,60 @@
+<h1>Formulário</h1>
+
+<!-- aqui estou criando um formulario que vai direcionar a respota a essa url usando esse metodo POST -->
+<form  method="POST">
+    <!-- esse é um input escondido nao fica visivel ao usuario (carrega dados escondidos)-->
+    <input type="hidden" name="id" value="3">
+    <!-- aqui estou criando uma entrada de texto, existe varios tipos de input -->
+    <input type="text" name="nome">
+    <!-- criando input de senha -->
+    <input type="password" name="senha">
+     <!-- criando uma caixa de texto -->
+    <textarea name="bio" cols="30" rows="10"></textarea>
+   
+    <!-- div é usada para divisão de conteudo, questao de organização -->
+    <div>
+
+        <input type="radio" name="tipo" value="admin"> Admin
+        <input type="radio" name="tipo" value="professor"> Regular
+
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo"> Ativo
+    </div>
+    <select name="estado">
+        <option value="">Selecione</option>
+        <option value="ac">Acre</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceará</option>
+    </select>
+    <select name="interesses" multiple size="5">
+        <option value="js">JS</option>
+        <option value="java">JAVA</option>
+        <option value="php">PHP</option>
+        <option value="python">PYTHON</option>
+        <option value="go">GO</option>
+        <option value="c">C</option>
+
+    </select>
+<!-- aqui criei um botão de submissao, com o nome Incluir -->
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button> 
+    <!-- aqui envia pra uma outra URL -->
+
+
+</form>
+
+<style>
+    input,
+    textarea,
+    select {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;
+    }
+</style>
